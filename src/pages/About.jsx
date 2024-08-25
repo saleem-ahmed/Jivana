@@ -118,101 +118,105 @@ const About = () => {
         <form
           // action=""
           // method="post"
-          className="mt-[30px] flex flex-row gap-[10px]"
+          className="mt-[30px] flex flex-col items-center gap-[40px]"
         >
-          <div className="flex flex-col gap-[10px]">
-            <input
-              type="date"
-              className="h-[45px] border border-solid rounded-lg border-[#CECECE] outline-0 w-full px-3"
-            />
-          </div>
-          <div className="flex flex-col gap-[10px]">
-            <input
-              type="date"
-              className="h-[45px] border border-solid border-[#CECECE] rounded-lg outline-0 w-full px-3"
-            />
-          </div>
-          <div className="flex flex-col gap-[10px]">
-            <div className="relative z-20">
-              <select className="relative z-20 w-full rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
-                <option value="" className="dark:bg-dark-2"></option>
-                <option value="" className="dark:bg-dark-2"></option>
-                <option value="" className="dark:bg-dark-2">
-                  2
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  3
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  4
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  5
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  6
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  7
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  8
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  9
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  10
-                </option>
-              </select>
-              <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
+          <div className="flex flex-row flex-wrap gap-[10px]">
+            <div className="flex flex-col gap-[10px]">
+              <input
+                type="date"
+                className="h-[45px] border border-solid rounded-lg border-[#CECECE] outline-0 w-full px-3"
+              />
+            </div>
+            <div className="flex flex-col gap-[10px]">
+              <input
+                type="date"
+                className="h-[45px] border border-solid border-[#CECECE] rounded-lg outline-0 w-full px-3"
+              />
+            </div>
+            <div className="flex flex-col gap-[10px]">
+              <div className="relative z-20 ">
+                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+                  <option value="" className="dark:bg-dark-2">
+                    Guest
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    1
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    2
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    3
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    4
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    5
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    6
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    7
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    8
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    9
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    10
+                  </option>
+                </select>
+                <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
+              </div>
+            </div>
+            <div className="flex flex-col gap-[10px]">
+              <div className="relative z-20">
+                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+                  <option value="" className="dark:bg-dark-2">
+                    Rooms
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    1
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    2
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    3
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    4
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    5
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    6
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    7
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    8
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    9
+                  </option>
+                  <option value="" className="dark:bg-dark-2">
+                    10
+                  </option>
+                </select>
+                <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[10px]">
-            <div className="relative z-20">
-              <select className="relative z-20 w-full rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
-                <option value="" className="dark:bg-dark-2"></option>
-                <option value="" className="dark:bg-dark-2">
-                  1
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  2
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  3
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  4
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  5
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  6
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  7
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  8
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  9
-                </option>
-                <option value="" className="dark:bg-dark-2">
-                  10
-                </option>
-              </select>
-              <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
-            </div>
-          </div>
-          {/* <button
-            type="submit"
-            className="relative w-[70%] mx-auto rounded-lg font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444] flex justify-center gap-[16px] items-center border border-[#CB9A6F] h-[45px]"
-          >
-            Check Availability
-            <span className=" h-[10px] w-[10px] rotate-[-45deg]  border-r-2 border-b-2 border-[#444444]"></span>
-          </button> */}
+          <button className="px-7 py-2 text-white font-medium bg-[#CB9A6F] rounded-lg duration-150">
+            Book now
+          </button>
         </form>
       </div>
       <section className=" box-border">

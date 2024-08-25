@@ -24,7 +24,9 @@ import C1 from "../assets/c-img1.png";
 import C2 from "../assets/c-img2.png";
 import C3 from "../assets/c-img3.png";
 import left from "../assets/left.png";
+import left1 from "../assets/left1.png";
 import right from "../assets/right.png";
+import right1 from "../assets/right1.png";
 import comma from "../assets/cooma.svg";
 import person1 from "../assets/person1.svg";
 import person2 from "../assets/person1.png";
@@ -41,6 +43,7 @@ import AboutImg1 from "../assets/about-img2.png";
 const Home = () => {
   const swiperRef = React.useRef(null);
   const swiperRef1 = React.useRef(null);
+  const swiperRef2 = React.useRef(null);
 
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -252,35 +255,49 @@ const Home = () => {
         </div>
       </div>
       <div className="relative flex flex-col items-center max-w-screen-xl mx-auto md:flex-row sm:px-6 gap-[60px]">
-        <div className="flex items-center justify-end  max-w-[609px] h-[473px] w-full">
+        <div className="flex items-center justify-end max-w-[609px] h-[473px] w-full relative">
           <Swiper
-            // effect={"flip"}
-            // grabCursor={true}
-            pagination={true}
-            navigation={true}
+            pagination={{ clickable: true }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             modules={[Pagination, Navigation]}
             className="mySwiper w-full"
           >
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 1" />
             </SwiperSlide>
+
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 2" />
             </SwiperSlide>
+
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 3" />
             </SwiperSlide>
+
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 4" />
             </SwiperSlide>
+
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 5" />
             </SwiperSlide>
+
             <SwiperSlide>
-              <img src={Serlide} alt="" />
+              <img src={Serlide} alt="Slide 6" />
             </SwiperSlide>
           </Swiper>
+
+          <div className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer after:hidden w-max">
+            <img className="w-[50px] h-[50px] object-cover" src={left1} alt="" />
+          </div>
+          <div className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer after:hidden w-max">
+            <img className="w-[50px] h-[50px] object-cover" src={right1} alt="" />
+          </div>
         </div>
+
         <div className="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
           <div className="text-left flex flex-col gap-[10px]">
             <h3 className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] font-semibold leading-7 tracking-[0.18em] text-left text-[#CB9A6F]">
@@ -301,11 +318,11 @@ const Home = () => {
               Services
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-6 gap-2 items-center">
-              <img src={serImg1} alt="" />
-              <img src={serImg2} alt="" />
-              <img src={serImg3} alt="" />
-              <img src={serImg4} alt="" />
-              <img src={serImg5} alt="" />
+              <img src={serImg1} alt="Service 1" />
+              <img src={serImg2} alt="Service 2" />
+              <img src={serImg3} alt="Service 3" />
+              <img src={serImg4} alt="Service 4" />
+              <img src={serImg5} alt="Service 5" />
               <button className="p-[7px] text-[15px] rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
                 Book Now
               </button>
@@ -315,7 +332,7 @@ const Home = () => {
       </div>
       <div className="bg-[url('assets/home-about.png')] bg-cover bg-no-repeat h-[850px] flex flex-col justify-center items-start">
         <div className="max-w-screen-xl mx-auto flex">
-          <div className="w-full flex flex-col items-start gap-[20px]">
+          <div className="w-full flex flex-col items-start gap-[20px] px-3 md:px-0">
             <h2 className="font-mohave text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[44px] font-medium leading-10 sm:leading-11 md:leading-12 lg:leading-[50px] xl:leading-[50px] text-left text-[#fff]">
               Jivana Hotel and Resort
             </h2>
@@ -358,9 +375,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="lg:col-span-2 flex flex-col lg:flex-row gap-3">
+            <div className="lg:col-span-2 flex flex-col items-center md:items-start lg:flex-row gap-3">
               <img className="max-w-[500px] w-full" src={chooseImg} alt="" />
-              <div className="flex flex-col items-between">
+              <div className="flex flex-col items-between px-4 md:px-0">
                 <div className="flex flex-col gap-[10px]">
                   <h3 className="flex items-center gap-3">
                     <img className="w-[23px] h-[23px]" src={C1} alt="" />
@@ -658,8 +675,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className="flex-1 mt-4 sm:mt-0
-                         sm:hidden  lg:flex justify-end items-center"
+              className="flex-1 mt-4 sm:mt-0 sm:hidden flex justify-center md:justify-end items-center"
             >
               <img
                 src={AboutImg1}
@@ -706,7 +722,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="flex-1 px-md-0 w-full lg:w-1/3 ">
+            <div className="flex-1 px-4 md:px-0 mb-4 md:mb-0 w-full lg:w-1/3 ">
               <Swiper
                 loop={true}
                 slidesPerView={1}
@@ -944,9 +960,9 @@ const Home = () => {
       {/* form */}
       <div className="py-10">
         <div className="max-w-screen-xl mx-auto text-gray-600 ">
-          <div className="gap-12 justify-between flex flex-col ">
+          <div className="gap-12 justify-between flex flex-col px-4 md:px-0">
             <div className="flex flex-col md:flex-row gap-[59px]">
-              <div className="w-full">
+              <div className="w-full ">
                 <h3 className="text-[#E1B524] text-[16px] md:text-[24px] font-semibold">
                   Contact
                 </h3>
