@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
         </div>
         <ul
-          className={`justify-center items-center space-y-6 md:flex gap-5 md:space-y-0 ${
+          className={`justify-center items-center space-y-0 md:flex gap-5 md:space-y-0 ${
             state ? "block" : "bg-[transparent] hidden"
           } `}
         >
@@ -103,7 +103,7 @@ const Navbar = () => {
                   to={item.path}
                   className={`block ${
                     state
-                      ? "text-[#005AAB] hover:text-white "
+                      ? "text-[#005AAB] hover:text-[#444] "
                       : "text-white hover:text-[#E1B524]"
                   }font-sans font-semibold leading-[50px] tracking-[0.14em]`}
                 >

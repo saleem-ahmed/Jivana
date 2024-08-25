@@ -40,6 +40,7 @@ import Map from "../assets/map.png";
 import AboutImg1 from "../assets/about-img2.png";
 const Home = () => {
   const swiperRef = React.useRef(null);
+  const swiperRef1 = React.useRef(null);
 
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -52,6 +53,19 @@ const Home = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
+
+  const handlePrev1 = () => {
+    if (swiperRef1.current && swiperRef1.current.swiper) {
+      swiperRef1.current.swiper.slidePrev();
+    }
+  };
+
+  const handleNext1 = () => {
+    if (swiperRef1.current && swiperRef1.current.swiper) {
+      swiperRef1.current.swiper.slideNext();
+    }
+  };
+
   return (
     <>
       <div className="relative bg-[url('assets/header-img.png')] px-4 lg:px-0 py-[60px] lg:py-0 h-full lg:h-[948px] bg-cover bg-no-repeat flex justify-center items-center">
@@ -406,7 +420,7 @@ const Home = () => {
                 <div className="relative flex gap-[16px]">
                   <button
                     className="swiper-button-prev after:hidden"
-                    onClick={handlePrev}
+                    onClick={handlePrev1}
                     style={{ all: "unset", cursor: "pointer" }}
                   >
                     <img className="w-[24px] h-[24px]" src={left} alt="" />
@@ -414,7 +428,7 @@ const Home = () => {
                   <button
                     className="swiper-button-next after:hidden"
                     style={{ all: "unset", cursor: "pointer" }}
-                    onClick={handleNext}
+                    onClick={handleNext1}
                   >
                     <img className="w-[24px] h-[24px]" src={right} alt="" />
                   </button>
@@ -437,8 +451,8 @@ const Home = () => {
                 }}
                 navigation={false}
                 modules={[Navigation]}
-                ref={swiperRef}
-                className="mySwiper pt-24 pb-16  max-w-[900px] w-full"
+                ref={swiperRef1}
+                className="mySwiper2 pt-24 pb-16  max-w-[900px] w-full"
               >
                 <SwiperSlide>
                   <div className="pb-[49px] relative w-full h-fit px-6 shadow-lg bg-white rounded-[10px]">
