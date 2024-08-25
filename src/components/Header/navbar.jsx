@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [state, setState] = useState(false);
+
   const navigation = [
     {
       title: "About",
@@ -28,26 +31,93 @@ const Navbar = () => {
     },
   ];
 
+
+  useEffect(() => {
+    document.onclick = (e) => {
+      const target = e.target;
+      if (!target.closest(".menu-btn")) setState(false);
+    };
+  }, []);
+
   return (
-    <div className="lg:pb-12">
-      <div className="mx-auto max-w-screen-xl">
-        <header className="flex items-center justify-between">
-          <Link to="/" aria-label="logo">
+    <nav
+      className={`font-poppins  md:text-sm ${
+        state
+          ? "shadow-lg rounded-xl bg-white border mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="gap-x-14 items-center w-[90%] mx-auto px-2 md:flex md:px-8">
+        <div className="flex w-full items-center  justify-between py-1 md:block">
+          <Link to="/">
             <img src={Logo} className="w-[166px]" alt="" />
           </Link>
-
-          <nav className="hidden gap-12 lg:flex py-3">
-            {navigation.map((link, id) => (
-              <Link
-                to={link.path}
-                key={id}
-                className="font-sans text-lg font-semibold leading-[50px] tracking-[0.14em] text-left text-white"
-              >
-                {link.title}
-              </Link>
-            ))}
-          </nav>
-
+          <div className="md:hidden">
+            <button
+              className={`menu-btn  ${
+                state ? "text-[#005AAB]" : "text-[white]"
+              }`}
+              onClick={() => setState(!state)}
+            >
+              {state ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+        <ul
+          className={`justify-center items-center space-y-6 md:flex gap-5 md:space-y-0 ${
+            state ? "block" : "bg-[transparent] hidden"
+          } `}
+        >
+          {navigation.map((item, id) => {
+            return (
+              <li key={id} className={` text-[18px] text-nowrap font-[500]  `}>
+                <Link
+                  to={item.path}
+                  className={`block ${
+                    state
+                      ? "text-[#005AAB] hover:text-white "
+                      : "text-white hover:text-[#E1B524]"
+                  }font-sans font-semibold leading-[50px] tracking-[0.14em]`}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div
+          className={`flex flex-col w-full justify-evenly mt-5 items-center md:mt-0 md:flex ${
+            state ? "block" : "hidden"
+          } `}
+        >
           <div className="-ml-8 hidden flex-col sm:flex-row sm:justify-center lg:flex lg:justify-start border border-white">
             <a
               to=""
@@ -70,28 +140,9 @@ const Navbar = () => {
               </svg>
             </span>
           </div>
-
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 rounded-lg px-2.5 py-2 text-sm font-semibold text-white ring-indigo-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-        </header>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
-
 export default Navbar;
