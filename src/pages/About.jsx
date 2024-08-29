@@ -106,8 +106,8 @@ const About = () => {
         </div>
       </div>
       {/*  */}
-      <div className="max-w-screen-xl bg-[url('assets/visit-back.png')] h-[535px] mx-auto bg-cover bg-no-repeat rounded-[10px] flex flex-col justify-center items-center">
-        <p className="text-white text-3xl font-semibold sm:text-4xl">
+      <div className="max-w-screen-xl bg-[url('assets/visit-back.png')] py-7 md:py-0 h-full md:h-[535px] mx-auto bg-cover bg-no-repeat rounded-[10px] flex flex-col justify-center items-center px-4 lg:px-0">
+        <p className="text-white text-center text-xl sm:text-2xl font-semibold sm:text-4xl">
           Lets Visit Jivana Hotel and Resort and Enjoy
         </p>
         <p className="text-blue-100 mt-3 text-center  px-4">
@@ -118,24 +118,24 @@ const About = () => {
         <form
           // action=""
           // method="post"
-          className="mt-[30px] flex flex-col items-center gap-[40px]"
+          className="mt-[30px] flex flex-col items-center gap-[40px] w-full"
         >
-          <div className="flex flex-row flex-wrap gap-[10px]">
-            <div className="flex flex-col gap-[10px]">
+          <div className="flex flex-col justify-center md:flex-row flex-wrap gap-[10px] w-full">
+            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
               <input
                 type="date"
                 className="h-[45px] border border-solid rounded-lg border-[#CECECE] outline-0 w-full px-3"
               />
             </div>
-            <div className="flex flex-col gap-[10px]">
+            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
               <input
                 type="date"
                 className="h-[45px] border border-solid border-[#CECECE] rounded-lg outline-0 w-full px-3"
               />
             </div>
-            <div className="flex flex-col gap-[10px]">
-              <div className="relative z-20 ">
-                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+            <div className="flex flex-col gap-[10px] ">
+              <div className="relative z-20">
+                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
                   <option value="" className="dark:bg-dark-2">
                     Guest
                   </option>
@@ -175,7 +175,7 @@ const About = () => {
             </div>
             <div className="flex flex-col gap-[10px]">
               <div className="relative z-20">
-                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
                   <option value="" className="dark:bg-dark-2">
                     Rooms
                   </option>
@@ -220,7 +220,7 @@ const About = () => {
         </form>
       </div>
       <section className=" box-border">
-        <div className="ps-0 md:ps-28 mx-auto ">
+        <div className="ps-0 lg:ps-28 mx-auto ">
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-[52px] items-center">
             <div className="px-4 px-md-0  max-w-[395px] w-full relative testimonals-swiper">
               <h5 className="text-[24px] font-[600] text-[#E1B524]">

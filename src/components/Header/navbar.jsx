@@ -47,7 +47,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="gap-x-14 items-center w-[90%] mx-auto px-2 md:flex md:px-8">
+      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-2 md:flex md:px-0">
         <div className="flex w-full items-center  justify-between py-1 md:block">
           <Link to="/">
             <img src={Logo} className="w-[166px]" alt="" />
@@ -114,7 +114,7 @@ const Navbar = () => {
           })}
         </ul>
         <div
-          className={`flex flex-col w-full justify-evenly mt-5 items-center md:mt-0 md:flex ${
+          className={`flex flex-col w-full justify-flex-end items-end md:mt-0 md:flex ${
             state ? "block" : "hidden"
           } `}
         >

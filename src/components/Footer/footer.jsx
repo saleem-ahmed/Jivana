@@ -8,7 +8,7 @@ import TwitterIcon from "../../assets/twitter.png";
 const Footer = () => {
   return (
     <>
-      <div className="relative footer py-10">
+      <div className="relative footer pb-10">
         <div className="bg-white mx-auto max-w-screen-xl flex flex-col lg:flex-row items-center lg:items-start gap-[80px] p-10 custom-shadow">
           <div className="flex flex-col items-center lg:items-start gap-[30px]">
             <h2 className="font-mohave text-2xl font-medium leading-[50px] text-left text-black/80">

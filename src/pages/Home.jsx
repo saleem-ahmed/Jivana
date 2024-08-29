@@ -40,10 +40,11 @@ import user from "../assets/user2.svg";
 import mail from "../assets/mail.svg";
 import Map from "../assets/map.png";
 import AboutImg1 from "../assets/about-img2.png";
+
 const Home = () => {
+ 
   const swiperRef = React.useRef(null);
   const swiperRef1 = React.useRef(null);
-  const swiperRef2 = React.useRef(null);
 
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -71,6 +72,7 @@ const Home = () => {
 
   return (
     <>
+      {/* header section */}
       <div className="relative bg-[url('assets/header-img.png')] px-4 lg:px-0 py-[60px] lg:py-0 h-full lg:h-[948px] bg-cover bg-no-repeat flex justify-center items-center">
         <div className="w-full absolute top-0">
           <Navbar />
@@ -80,7 +82,7 @@ const Home = () => {
             <h2 className="font-mohave text-3xl mt-5 lg:mt-0 sm:text-4xl text-center md:text-5xl lg:text-6xl lg:text-left xl:text-[94px] font-semibold text-white">
               Your Home Away From Home
             </h2>
-            <p className="text-white text-center lg:text-left">
+            <p className="text-white text-center lg:text-left mt-[30px]">
               Sukh Cha'n Wellness Club's mission is to provide a conducive and
               congenial environment to everyone and stand out in the wellnes
             </p>
@@ -97,10 +99,10 @@ const Home = () => {
               <div className="flex flex-col gap-[10px]">
                 <label
                   htmlFor=""
-                  className="flex gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
+                  className="flex items-center gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
                 >
                   <img
-                    className="w-[24px] h-[24px]"
+                    className="w-[20px] h-[20px]"
                     src={CalenderIcon}
                     alt=""
                   />
@@ -114,9 +116,9 @@ const Home = () => {
               <div className="flex flex-col gap-[10px]">
                 <label
                   htmlFor=""
-                  className="flex gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
+                  className="flex items-center gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
                 >
-                  <img className="w-[24px] h-[24px]" src={GuestIcon} alt="" />
+                  <img className="w-[20px] h-[20px]" src={GuestIcon} alt="" />
                   Check Out
                 </label>
                 <input
@@ -127,10 +129,10 @@ const Home = () => {
               <div className="flex flex-col gap-[10px]">
                 <label
                   htmlFor=""
-                  className="flex gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
+                  className="flex items-center gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
                 >
                   <img
-                    className="w-[24px] h-[24px]"
+                    className="w-[20px] h-[20px]"
                     src={CalenderIcon}
                     alt=""
                   />
@@ -176,9 +178,9 @@ const Home = () => {
               <div className="flex flex-col gap-[10px]">
                 <label
                   htmlFor=""
-                  className="flex gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
+                  className="flex items-center gap-[10px] font-open-sans text-[18px] font-semibold leading-[30px] tracking-[0.14em] text-left text-[#444444]"
                 >
-                  <img className="w-[24px] h-[24px]" src={RoomtIcon} alt="" />
+                  <img className="w-[20px] h-[20px]" src={RoomtIcon} alt="" />
                   Rooms
                 </label>
                 <div className="relative z-20">
@@ -229,8 +231,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col items-center max-w-screen-xl mx-auto md:flex-row sm:px-6 gap-[60px]">
-        <div className="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
+
+      <div className="relative flex flex-col items-center max-w-screen-xl mx-auto lg:flex-row px-5 lg:px-0 gap-[30px] lg:gap-[50px] pt-[40px]">
+        <div className="flex items-center flex-1 md:py-10">
           <div className="text-left flex flex-col gap-[20px]">
             <h3 className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] font-semibold leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-[50px] tracking-[0.18em] text-left text-[#CB9A6F]">
               ABOUT
@@ -250,12 +253,15 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-end  max-w-[569px] h-[470px] w-full">
+        <div className="flex items-center justify-end  max-w-[569px] h-auto lg:h-[470px] w-full">
           <img className="w-full h-full" src={AboutImg} alt="" />
         </div>
       </div>
-      <div className="relative flex flex-col items-center max-w-screen-xl mx-auto md:flex-row sm:px-6 gap-[60px]">
-        <div className="flex items-center justify-end max-w-[609px] h-[473px] w-full relative">
+
+
+      <div className="relative flex flex-col items-center max-w-screen-xl mx-auto lg:flex-row px-6 md:px-0 gap-[60px]  py-[80px]">
+
+        <div className="flex items-center justify-end max-w-[609px] h-auto lg:h-[473px] w-full relative">
           <Swiper
             pagination={{ clickable: true }}
             navigation={{
@@ -291,14 +297,22 @@ const Home = () => {
           </Swiper>
 
           <div className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer after:hidden w-max">
-            <img className="w-[50px] h-[50px] object-cover" src={left1} alt="" />
+            <img
+              className="w-[50px] h-[50px] object-cover"
+              src={left1}
+              alt=""
+            />
           </div>
           <div className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer after:hidden w-max">
-            <img className="w-[50px] h-[50px] object-cover" src={right1} alt="" />
+            <img
+              className="w-[50px] h-[50px] object-cover"
+              src={right1}
+              alt=""
+            />
           </div>
         </div>
 
-        <div className="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
+        <div className="flex items-center py-5 flex-1 md:py-10 px-5 lg:px-0">
           <div className="text-left flex flex-col gap-[10px]">
             <h3 className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] font-semibold leading-7 tracking-[0.18em] text-left text-[#CB9A6F]">
               Rooms
@@ -330,9 +344,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="bg-[url('assets/home-about.png')] bg-cover bg-no-repeat h-[850px] flex flex-col justify-center items-start">
         <div className="max-w-screen-xl mx-auto flex">
-          <div className="w-full flex flex-col items-start gap-[20px] px-3 md:px-0">
+          <div className="w-full flex flex-col items-start gap-[20px] px-3 lg:px-0">
             <h2 className="font-mohave text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[44px] font-medium leading-10 sm:leading-11 md:leading-12 lg:leading-[50px] xl:leading-[50px] text-left text-[#fff]">
               Jivana Hotel and Resort
             </h2>
@@ -351,9 +366,11 @@ const Home = () => {
           <div className=" md:w-[40%]"></div>
         </div>
       </div>
+
+
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-xl">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 flex flex-col md:flex-row">
+          <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3 lg:gap-12 flex flex-col md:flex-row">
             <div>
               <div className="p-4 flex flex-col items-start justify-center gap-4">
                 <span className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-semibold leading-[30px] sm:leading-[40px] md:leading-[50px] tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em] lg:tracking-[0.18em] text-left sm:text-center md:text-left text-[#CB9A6F]">
@@ -375,9 +392,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="lg:col-span-2 flex flex-col items-center md:items-start lg:flex-row gap-3">
+            <div className="lg:col-span-2 flex flex-col items-center lg:items-start lg:flex-row gap-3">
               <img className="max-w-[500px] w-full" src={chooseImg} alt="" />
-              <div className="flex flex-col items-between px-4 md:px-0">
+              <div className="flex flex-col items-between px-4 lg:px-0">
                 <div className="flex flex-col gap-[10px]">
                   <h3 className="flex items-center gap-3">
                     <img className="w-[23px] h-[23px]" src={C1} alt="" />
@@ -422,9 +439,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/* Testimonals */}
       <section className="mt-10 box-border">
-        <div className="ps-0 md:ps-28 mx-auto ">
+        <div className="ps-0 lg:ps-28 mx-auto ">
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-[52px]">
             <div className="px-4 px-md-0 py-10 md:py-[113px] max-w-[395px] w-full relative testimonals-swiper">
               <h5 className="text-[24px] font-[600] text-[#E1B524]">
@@ -652,7 +670,7 @@ const Home = () => {
       {/*  */}
       <section className="bg-[#CB9A6F1A]">
         <div className="max-w-screen-xl mx-auto py-10">
-          <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
+          <div className="items-center gap-x-12 sm:px-4 lg:px-0 flex flex-col md:flex-row">
             <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
               <div className="p-4 flex flex-col items-start justify-center gap-4">
                 <span className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-semibold leading-[30px] sm:leading-[40px] md:leading-[50px] tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em] lg:tracking-[0.18em] text-left sm:text-center md:text-left text-[#CB9A6F]">
@@ -674,9 +692,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div
-              className="flex-1 mt-4 sm:mt-0 sm:hidden flex justify-center md:justify-end items-center"
-            >
+            <div className="flex-1 mt-4 sm:mt-0  flex justify-center md:justify-end items-center">
               <img
                 src={AboutImg1}
                 className="max-w-[483px] w-full sm:rounded-lg"
@@ -844,8 +860,8 @@ const Home = () => {
         </div>
       </section>
       {/*  */}
-      <div className="max-w-screen-xl bg-[url('assets/visit-back.png')] h-[535px] mx-auto bg-cover bg-no-repeat rounded-[10px] flex flex-col justify-center items-center">
-        <p className="text-white text-3xl font-semibold sm:text-4xl">
+      <div className="max-w-screen-xl bg-[url('assets/visit-back.png')] py-7 md:py-0 h-full md:h-[535px] mx-auto bg-cover bg-no-repeat rounded-[10px] flex flex-col justify-center items-center px-4 lg:px-0">
+        <p className="text-white text-center text-xl sm:text-2xl font-semibold sm:text-4xl">
           Lets Visit Jivana Hotel and Resort and Enjoy
         </p>
         <p className="text-blue-100 mt-3 text-center  px-4">
@@ -856,24 +872,24 @@ const Home = () => {
         <form
           // action=""
           // method="post"
-          className="mt-[30px] flex flex-col items-center gap-[40px]"
+          className="mt-[30px] flex flex-col items-center gap-[40px] w-full"
         >
-          <div className="flex flex-row flex-wrap gap-[10px]">
-            <div className="flex flex-col gap-[10px]">
+          <div className="flex justify-center flex-col md:flex-row flex-wrap gap-[10px] w-full">
+            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
               <input
                 type="date"
                 className="h-[45px] border border-solid rounded-lg border-[#CECECE] outline-0 w-full px-3"
               />
             </div>
-            <div className="flex flex-col gap-[10px]">
+            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
               <input
                 type="date"
                 className="h-[45px] border border-solid border-[#CECECE] rounded-lg outline-0 w-full px-3"
               />
             </div>
-            <div className="flex flex-col gap-[10px]">
-              <div className="relative z-20 ">
-                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+            <div className="flex flex-col gap-[10px] ">
+              <div className="relative z-20">
+                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
                   <option value="" className="dark:bg-dark-2">
                     Guest
                   </option>
@@ -913,7 +929,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col gap-[10px]">
               <div className="relative z-20">
-                <select className="w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
+                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
                   <option value="" className="dark:bg-dark-2">
                     Rooms
                   </option>
@@ -960,7 +976,7 @@ const Home = () => {
       {/* form */}
       <div className="py-10">
         <div className="max-w-screen-xl mx-auto text-gray-600 ">
-          <div className="gap-12 justify-between flex flex-col px-4 md:px-0">
+          <div className="gap-12 justify-between flex flex-col px-4 lg:px-0">
             <div className="flex flex-col md:flex-row gap-[59px]">
               <div className="w-full ">
                 <h3 className="text-[#E1B524] text-[16px] md:text-[24px] font-semibold">
@@ -977,8 +993,8 @@ const Home = () => {
                   className="space-y-5"
                 >
                   <div>
-                    <label className="font-[600] flex gap-1">
-                      <img src={user} alt="" />
+                    <label className="font-[600] flex items-center gap-1">
+                      <img className="w-[20px] h-[20px]" src={user} alt="" />
                       Full name
                     </label>
                     <input
@@ -988,8 +1004,8 @@ const Home = () => {
                     />
                   </div>
                   <div>
-                    <label className="font-[600] flex gap-1">
-                      <img src={mail} alt="" />
+                    <label className="font-[600] flex items-center gap-1">
+                      <img className="w-[20px] h-[20px]" src={mail} alt="" />
                       Email
                     </label>
                     <input
@@ -1000,8 +1016,8 @@ const Home = () => {
                   </div>
 
                   <div>
-                    <label className="font-[600] flex gap-1">
-                      <img src={mail} alt="" />
+                    <label className="font-[600] flex items-center gap-1">
+                      <img className="w-[20px] h-[20px]" src={mail} alt="" />
                       Message
                     </label>
                     <textarea
