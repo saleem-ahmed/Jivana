@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-2 md:flex md:px-0">
         <div className="flex w-full items-center  justify-between py-1 md:block">
           <Link to="/">
-            <img src={Logo} className="w-[166px]" alt="" />
+            <img  src={Logo} className={`w-[166px] ${state ? "invert-css" : ""}`} alt="" />
           </Link>
           <div className="md:hidden">
             <button

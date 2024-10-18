@@ -22,3 +22,8 @@
 .single-line {
     text-wrap: nowrap;
 }
+
+
+.invert-css {
+  filter: invert(1);
+}
