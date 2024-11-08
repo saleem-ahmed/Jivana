@@ -6,7 +6,10 @@ import Blog from "../../pages/Blog.jsx";
 import FindUs from "../../pages/FindUs.jsx";
 import Gateway from "../../pages/Gateway.jsx";
 import Restaurant from "../../pages/Restaurant.jsx";
+import Story from "../../pages/Our-story.jsx";
+import Sandi from "../../pages/sandi.jsx";
 import { useRoutes } from "react-router-dom";
+
 const Navigation = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
@@ -16,6 +19,8 @@ const Navigation = () => {
     { path: "find-us", element: <FindUs /> },
     { path: "gateway", element: <Gateway /> },
     { path: "restaurant", element: <Restaurant /> },
+    { path: "about/our-story", element: <Story /> },
+    { path: "sandi", element: <Sandi /> },
   ]);
 
   return routes;

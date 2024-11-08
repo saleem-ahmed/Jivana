@@ -23,17 +23,15 @@ const Resturant = () => {
         <div class="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
           <div class="text-left flex flex-col gap-[20px]">
             <p class="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[18px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
-              Lorem ipsum dolor sit amet consectetur. Arcu at aliquam eu purus
-              volutpat. Tincidunt libero nibh potenti sem ac est pellentesque
-              proin in. Sagittis duis eget posuere consequat volutpat eu
-              facilisis vestibulum aenean. Posuere mauris sed iaculis amet
-              adipiscing pretium elementum amet. Sed tincidunt tristique sed
-              augue a ipsum tincidunt a volutpat. Lectus amet mauris sed morbi
-              leo nisl lectus tortor lectus. Non tempor massa senectus et arcu
-              id sollicitudin. Ornare imperdiet quam tempus elementum sapien
-              orci sit. Adipiscing et quam dictum aliquam massa semper.sed augue
-              a ipsum tincidunt a volutpat. Lectus amet mauris sed morbi leo
-              nisl lectus tortor lectus. Non tempor
+              At Jivana Hotel and Resort, dining is an essential part of the
+              experience, offering a culinary journey that beautifully combines
+              the rich flavors of the Yasin Valley with international gourmet
+              delights. Our restaurant emphasizes farm-to-table freshness,
+              prioritizing locally sourced ingredients from nearby farms and
+              orchards to ensure every dish is vibrant, flavorful, and
+              nutritious. From the valley’s renowned apricots and walnuts to
+              seasonal herbs and vegetables, each bite captures the purity and
+              richness of the region’s produce.
             </p>
           </div>
         </div>
@@ -45,17 +43,18 @@ const Resturant = () => {
         <div class="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
           <div className="text-left flex flex-col items-start gap-[20px]">
             <h2 className="font-mohave text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[44px] font-medium leading-10 sm:leading-11 md:leading-12 lg:leading-[50px] xl:leading-[50px] text-left text-[#000000D1]">
-              Lorem Ispum ;ore,m
+              Dining Experiences
             </h2>
             <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[18px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
-              This is yours to reach—a place of peace and opulence, the most
-              exclusive retreat on the river bank of the mystical Yasin Valley,
-              the Ghizer District. The resort has been harmoniously interwoven
-              with traditional local architecture and the high Himalayan
-              landscapes to ooze elegance through modern design. Jivana means
-              celebrating life and exuberance, doled out to you in an immersive
-              manner, promising to rejuvenate the senses with cultural opulence
-              at every step.
+              At Jivana, we offer a variety of dining options to suit your mood:
+              Indoor Dining: Dine in our elegantly designed restaurant, which
+              features large windows that offer sweeping views of the
+              surrounding mountains and valley. Outdoor Dining: For a more
+              intimate experience, choose our outdoor seating area where you can
+              enjoy your meal under the stars with the sounds of the Sandi River
+              flowing nearby. Private Dining: For special occasions, we offer
+              personalized, private dining experiences, whether on your balcony
+              or a secluded spot within the resort.
             </p>
             <button className="p-[7px] text-lg rounded-[10px] rounded border-transparent border-[1px] bg-[#CB9A6F] text-white">
               Book Now

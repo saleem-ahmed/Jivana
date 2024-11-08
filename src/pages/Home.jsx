@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectFlip, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import Navbar from "../components/Header/navbar";
 import CalenderIcon from "../assets/calendar.png";
 import GuestIcon from "../assets/calendar.png";
@@ -28,8 +28,10 @@ import left1 from "../assets/left1.png";
 import right from "../assets/right.png";
 import right1 from "../assets/right1.png";
 import comma from "../assets/cooma.svg";
-import person1 from "../assets/person1.svg";
-import person2 from "../assets/person1.png";
+import BlogImg1 from "../assets/hblog-img1.png";
+import BlogImg2 from "../assets/hblog-img2.png";
+import BlogImg3 from "../assets/hblog-img3.png";
+import person1 from "../assets/person2.svg";
 import img1 from "../assets/g-img1.png";
 import img2 from "../assets/g-img2.png";
 import img3 from "../assets/g-img3.png";
@@ -40,9 +42,10 @@ import user from "../assets/user2.svg";
 import mail from "../assets/mail.svg";
 import Map from "../assets/map.png";
 import AboutImg1 from "../assets/about-img2.png";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
- 
+  const navigate = useNavigate();
+
   const swiperRef = React.useRef(null);
   const swiperRef1 = React.useRef(null);
 
@@ -70,6 +73,10 @@ const Home = () => {
     }
   };
 
+  const handleReadMore = () => {
+    navigate("/gateway");
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (
     <>
       {/* header section */}
@@ -83,8 +90,9 @@ const Home = () => {
               Your Home Away From Home
             </h2>
             <p className="text-white text-center lg:text-left mt-[30px]">
-              Sukh Cha'n Wellness Club's mission is to provide a conducive and
-              congenial environment to everyone and stand out in the wellnes
+              Welcome to Jivana Hotel and Resort, a sanctuary of peace and
+              rejuvenation in the heart of Gilgit Baltistan’s mystical Yasin
+              Valley.
             </p>
           </div>
           <div className="max-w-[421px] w-full pt-[30px] pr-[20px] pb-[30px] pl-[20px] gap-[30px] rounded-[10px] bg-white">
@@ -239,17 +247,15 @@ const Home = () => {
               ABOUT
             </h3>
             <h2 className="font-mohave text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[44px] font-medium leading-10 sm:leading-11 md:leading-12 lg:leading-[50px] xl:leading-[50px] text-left text-[#000000D1]">
-              Discover Our Story
+              Our Story
             </h2>
             <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[18px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
-              This is yours to reach—a place of peace and opulence, the most
-              exclusive retreat on the river bank of the mystical Yasin Valley,
-              the Ghizer District. The resort has been harmoniously interwoven
-              with traditional local architecture and the high Himalayan
-              landscapes to ooze elegance through modern design. Jivana means
-              celebrating life and exuberance, doled out to you in an immersive
-              manner, promising to rejuvenate the senses with cultural opulence
-              at every step.
+              Welcome to Jivana Hotel and Resort, a sanctuary of peace and
+              rejuvenation in the heart of Gilgit Baltistan’s mystical Yasin
+              Valley. Nestled along the quiet banks of the Sandi River and
+              encircled by the majestic peaks of the Himalayas, Jivana is far
+              more than a hotel—it is an experience that immerses guests in the
+              profound beauty and heritage of this untouched region.
             </p>
           </div>
         </div>
@@ -258,9 +264,7 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="relative flex flex-col items-center max-w-screen-xl mx-auto lg:flex-row px-6 md:px-0 gap-[60px]  py-[80px]">
-
         <div className="flex items-center justify-end max-w-[609px] h-auto lg:h-[473px] w-full relative">
           <Swiper
             pagination={{ clickable: true }}
@@ -323,10 +327,13 @@ const Home = () => {
             </h2>
             <h2 className="font-mohave text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[44px] font-medium leading-10 text-left text-[#000000D1]"></h2>
             <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[18px] font-normal leading-6 text-left text-[#444444]">
-              Sukh Cha'n Wellness Club is a pioneering wellness center that
-              offers a unique and holistic approach to health and fitness.
-              Established in 2005, the club is located in the heart of Lahore,
-              Pakistan, and provides a blished in 2005, the .
+              At Jivana Hotel and Resort, every room is designed to reflect the
+              natural beauty of the surrounding Himalayan landscape while
+              offering the modern comforts that make your stay truly
+              unforgettable. Our rooms provide a perfect blend of traditional
+              craftsmanship and contemporary elegance, ensuring that your stay
+              is both luxurious and deeply connected to the unique cultural
+              heritage of the Yasin Valley.
             </p>
             <h2 className="font-mohave text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-[24px] font-medium text-left text-[#000000D1]">
               Services
@@ -367,7 +374,6 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-xl">
           <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3 lg:gap-12 flex flex-col md:flex-row">
@@ -376,20 +382,23 @@ const Home = () => {
                 <span className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-semibold leading-[30px] sm:leading-[40px] md:leading-[50px] tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em] lg:tracking-[0.18em] text-left sm:text-center md:text-left text-[#CB9A6F]">
                   Why Choose Us
                 </span>
-                <h3 className="font-mohave text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[28px] font-medium leading-[40px] sm:leading-[45px] md:leading-[50px] text-left text-[#000000D1]">
-                  An Exceptionally Unique Experience Tailored To You
+                <h3 className="font-mohave text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[28px] font-medium text-[#000000D1]">
+                  An Unparalleled Experience of Luxury and Nature
                 </h3>
-                <p className="text-[18px]">
-                  Sukh Cha'n Wellness Club is a pioneering wellness center that
-                  offers a unique and holistic approach to health and fitness.
-                  Established in 2005, the club is located in the heart of
-                  Lahore, Pakistan, and provides a variety of facilities under
-                  one roof to help members achi-art facility that caters to
-                  individuals who seek an exclusive wellness experience.
+                <p className="text-[16px]">
+                  Jivana Hotel and Resort is a sanctuary of wellness, culture,
+                  and renewal, rooted in the pioneering legacy of Sukh Chan
+                  Wellness Club. Building on Sukh Chan’s holistic approach,
+                  Jivana offers restorative spa treatments, yoga, and
+                  mindfulness retreats in the serene Yasin Valley. Beyond
+                  wellness, Jivana is a center of excellence for promoting the
+                  valley’s rich history, art, and culture. Through immersive
+                  programs, guests engage with local artisans, experience
+                  traditional crafts, and connect deeply with the heritage of
+                  the Yasin Valley. Every visit to Jivana is more than a stay;
+                  it’s a journey toward vitality and balance, where guests feel
+                  at one with nature and culture—a place you’ll wish to linger.
                 </p>
-                <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
-                  Book Now
-                </button>
               </div>
             </div>
             <div className="lg:col-span-2 flex flex-col items-center lg:items-start lg:flex-row gap-3">
@@ -403,9 +412,9 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] font-normal text-[#444444]">
-                    Sukh Cha'n Wellness Club is a pioneering wellness center
-                    that offers a unique and holistic approach to health and
-                    fitness. Established in n
+                    Experience a transformative journey at Jivana Hotel and
+                    Resort, where luxury, culture, and wellness unite in the
+                    heart of the Yasin Valley.
                   </p>
                 </div>
                 <div className="flex flex-col gap-[10px]">
@@ -416,9 +425,10 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] font-normal text-[#444444]">
-                    Sukh Cha'n Wellness Club is a pioneering wellness center
-                    that offers a unique and holistic approach to health and
-                    fitness. Established in n
+                    Experience unparalleled comfort and tranquility in our
+                    beautifully appointed rooms at Jivana Hotel and Resort,
+                    where luxury meets the breathtaking beauty of the Yasin
+                    Valley.
                   </p>
                 </div>
                 <div className="flex flex-col gap-[10px]">
@@ -429,9 +439,9 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="font-open-sans text-[14px] sm:text-[16px] md:text-[18px] font-normal text-[#444444]">
-                    Sukh Cha'n Wellness Club is a pioneering wellness center
-                    that offers a unique and holistic approach to health and
-                    fitness. Established in n
+                    Experience a diverse array of exceptional services at Jivana
+                    Hotel and Resort, where programs, and cultural immersions
+                    enhance your stay in the stunning Yasin Valley.
                   </p>
                 </div>
               </div>
@@ -504,7 +514,7 @@ const Home = () => {
                         src={comma}
                         alt=""
                       />
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
                         David Werner
                       </h3>
                       <p className="text-[16px] font-[400] text-[#444444] leading-[37px]">
@@ -532,7 +542,7 @@ const Home = () => {
                         src={comma}
                         alt=""
                       />
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
                         David Werner
                       </h3>
                       <p className="text-[16px] font-[400] text-[#444444] leading-[37px]">
@@ -560,7 +570,7 @@ const Home = () => {
                         src={comma}
                         alt=""
                       />
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
                         David Werner
                       </h3>
                       <p className="text-[16px] font-[400] text-[#444444] leading-[37px]">
@@ -588,7 +598,7 @@ const Home = () => {
                         src={comma}
                         alt=""
                       />
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
                         David Werner
                       </h3>
                       <p className="text-[16px] font-[400] text-[#444444] leading-[37px]">
@@ -680,12 +690,16 @@ const Home = () => {
                   Our Awesome Restaurant
                 </h3>
                 <p className="text-[18px]">
-                  Sukh Cha'n Wellness Club is a pioneering wellness center that
-                  offers a unique and holistic approach to health and fitness.
-                  Established in 2005, the club is located in the heart of
-                  Lahore, Pakistan, and provides a variety of facilities under
-                  one roof to help members achi-art facility that caters to
-                  individuals who seek an exclusive wellness experience.
+                  At Jivana Hotel and Resort, dining is an essential part of the
+                  experience, offering a culinary journey that beautifully
+                  combines the rich flavors of the Yasin Valley with
+                  international gourmet delights. Our restaurant emphasizes
+                  farm-to-table freshness, prioritizing locally sourced
+                  ingredients from nearby farms and orchards to ensure every
+                  dish is vibrant, flavorful, and nutritious. From the valley’s
+                  renowned apricots and walnuts to seasonal herbs and
+                  vegetables, each bite captures the purity and richness of the
+                  region’s produce.
                 </p>
                 <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
                   Book Now
@@ -712,9 +726,10 @@ const Home = () => {
                 Recent Blog Posts
               </p>
               <p>
-                Sukh Cha'n Wellness Club is a pioneering wellness center that
-                offers a unique and holistic approach to health and fitness.
-                Established in 2005, the club is
+                Explore the hidden gems surrounding Jivana Hotel and Resort.
+                Each gateway offers a unique blend of adventure, culture, and
+                natural beauty, providing you with an unforgettable experience
+                in the heart of the Yasin Valley.
               </p>
               <div className="flex items-center mt-10">
                 <div className="relative flex gap-[16px]">
@@ -757,18 +772,22 @@ const Home = () => {
                 <SwiperSlide>
                   <div className=" relative w-full h-fit shadow-lg bg-[#FAF5F1] rounded-[10px]">
                     <div className="flex flex-col justify-center items-center">
-                      <img src={person2} alt="" />
+                      <img src={BlogImg1} alt="" />
                     </div>
                     <div className="flex flex-col justify-center items-start px-[16px] py-[10px]">
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
-                        David Werner
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
+                        Moduri Fort Yasin
                       </h3>
 
-                      <p className="  text-[18px] font-[400] leading-[37px] text-[#444444]">
-                        Sukh Cha'n Wellness Club is a pioneering wellness center
-                        that offers a unique and holistic a
+                      <p className="  text-[14px] font-[400] leading-[27px] text-[#444444]">
+                        Visit the historic Muduri Fort for breathtaking valley
+                        views, and experience the thrill of rafting down the
+                        Sandi River.
                       </p>
-                      <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
+                      <button
+                        onClick={() => handleReadMore()}
+                        className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white text-[14px]"
+                      >
                         Read More
                       </button>
                     </div>
@@ -777,18 +796,22 @@ const Home = () => {
                 <SwiperSlide>
                   <div className=" relative w-full h-fit shadow-lg bg-[#FAF5F1] rounded-[10px]">
                     <div className="flex flex-col justify-center items-center">
-                      <img src={person2} alt="" />
+                      <img src={BlogImg2} alt="" />
                     </div>
                     <div className="flex flex-col justify-center items-start px-[16px] py-[10px]">
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
-                        David Werner
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
+                        Lalak Jan Shaheed (NH) 1999
                       </h3>
 
-                      <p className="  text-[18px] font-[400] leading-[37px] text-[#444444]">
-                        Sukh Cha'n Wellness Club is a pioneering wellness center
-                        that offers a unique and holistic a
+                      <p className="  text-[14px] font-[400] leading-[27px] text-[#444444]">
+                        Rich in history and pride, Hundur Village is home to
+                        monuments honoring legendary warriors like Lalik Jan
+                        Shaheed.
                       </p>
-                      <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
+                      <button
+                        onClick={() => handleReadMore()}
+                        className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white text-[14px]"
+                      >
                         Read More
                       </button>
                     </div>
@@ -797,18 +820,22 @@ const Home = () => {
                 <SwiperSlide>
                   <div className=" relative w-full h-fit shadow-lg bg-[#FAF5F1] rounded-[10px]">
                     <div className="flex flex-col justify-center items-center">
-                      <img src={person2} alt="" />
+                      <img src={BlogImg3} alt="" />
                     </div>
                     <div className="flex flex-col justify-center items-start px-[16px] py-[10px]">
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
-                        David Werner
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
+                        Darkut Pass
                       </h3>
 
-                      <p className="  text-[18px] font-[400] leading-[37px] text-[#444444]">
-                        Sukh Cha'n Wellness Club is a pioneering wellness center
-                        that offers a unique and holistic a
+                      <p className="  text-[14px] font-[400] leading-[27px] text-[#444444]">
+                        Darkut Valley offers rugged treks, including the famous
+                        Darkut Pass, a high-altitude adventure with panoramic
+                        views of the Himalayas.
                       </p>
-                      <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
+                      <button
+                        onClick={() => handleReadMore()}
+                        className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white text-[14px]"
+                      >
                         Read More
                       </button>
                     </div>
@@ -817,18 +844,22 @@ const Home = () => {
                 <SwiperSlide>
                   <div className=" relative w-full h-fit shadow-lg bg-[#FAF5F1] rounded-[10px]">
                     <div className="flex flex-col justify-center items-center">
-                      <img src={person2} alt="" />
+                      <img src={BlogImg1} alt="" />
                     </div>
                     <div className="flex flex-col justify-center items-start px-[16px] py-[10px]">
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
-                        David Werner
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
+                        Moduri Fort Yasin
                       </h3>
 
-                      <p className="  text-[18px] font-[400] leading-[37px] text-[#444444]">
-                        Sukh Cha'n Wellness Club is a pioneering wellness center
-                        that offers a unique and holistic a
+                      <p className="  text-[14px] font-[400] leading-[27px] text-[#444444]">
+                        Visit the historic Muduri Fort for breathtaking valley
+                        views, and experience the thrill of rafting down the
+                        Sandi River.
                       </p>
-                      <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
+                      <button
+                        onClick={() => handleReadMore()}
+                        className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white text-[14px]"
+                      >
                         Read More
                       </button>
                     </div>
@@ -837,18 +868,22 @@ const Home = () => {
                 <SwiperSlide>
                   <div className=" relative w-full h-fit shadow-lg bg-[#FAF5F1] rounded-[10px]">
                     <div className="flex flex-col justify-center items-center">
-                      <img src={person2} alt="" />
+                      <img src={BlogImg2} alt="" />
                     </div>
                     <div className="flex flex-col justify-center items-start px-[16px] py-[10px]">
-                      <h3 className="text-[24px] font-[600] text-[#E1B524] pt-4">
-                        David Werner
+                      <h3 className="text-[18px] font-[600] text-[#E1B524] pt-4">
+                        Darkut Pass
                       </h3>
 
-                      <p className="  text-[18px] font-[400] leading-[37px] text-[#444444]">
-                        Sukh Cha'n Wellness Club is a pioneering wellness center
-                        that offers a unique and holistic a
+                      <p className="  text-[14px] font-[400] leading-[27px] text-[#444444]">
+                        Darkut Valley offers rugged treks, including the famous
+                        Darkut Pass, a high-altitude adventure with panoramic
+                        views of the Himalayas.
                       </p>
-                      <button className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white">
+                      <button
+                        onClick={() => handleReadMore()}
+                        className="p-[7px] text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white text-[14px]"
+                      >
                         Read More
                       </button>
                     </div>
@@ -865,9 +900,8 @@ const Home = () => {
           Lets Visit Jivana Hotel and Resort and Enjoy
         </p>
         <p className="text-blue-100 mt-3 text-center  px-4">
-          Sukh Cha'n Wellness Club is a pioneering wellness center that offers a
-          unique and holistic approach to health and fitness. Established in
-          2005, the club is
+          Jivana Hotel and Resort, a sanctuary of peace and rejuvenation in the
+          heart of Gilgit Baltistan’s mystical Yasin Valley.
         </p>
         <form
           // action=""

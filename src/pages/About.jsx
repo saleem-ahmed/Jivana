@@ -50,175 +50,119 @@ const About = () => {
         </div>
         <div className="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
           <div className="text-left flex flex-col gap-[20px]">
-            <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[18px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
-              Lorem ipsum dolor sit amet consectetur. Arcu at aliquam eu purus
-              volutpat. Tincidunt libero nibh potenti sem ac est pellentesque
-              proin in. Sagittis duis eget posuere consequat volutpat eu
-              facilisis vestibulum aenean. Posuere mauris sed iaculis amet
-              adipiscing pretium elementum amet. Sed tincidunt tristique sed
-              augue a ipsum tincidunt a volutpat. Lectus amet mauris sed morbi
-              leo nisl lectus tortor lectus. Non tempor massa senectus et arcu.
+            <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[16px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
+              Welcome to Jivana Hotel and Resort, a sanctuary of peace and
+              rejuvenation in the heart of Gilgit Baltistan’s mystical Yasin
+              Valley. Nestled along the quiet banks of the Sandi River and
+              encircled by the majestic peaks of the Himalayas, Jivana is far
+              more than a hotel—it is an experience that immerses guests in the
+              profound beauty and heritage of this untouched region. At Jivana,
+              we embrace a philosophy of celebrating life. Our name, rooted in
+              the Sanskrit word Jivana, meaning "life" and "vitality," reflects
+              our commitment to nurturing the spirit and honoring the natural
+              world. Here, every detail is designed to embody harmony with
+              nature, offering an authentic and enriched experience of the Yasin
+              Valley. Our guests are invited not only to stay but to live fully
+              in the presence of pristine landscapes and vibrant cultural
+              traditions.
             </p>
           </div>
         </div>
       </div>
-      <div className="bg-[#FAF5F1BD]">
-        <div className="max-w-screen-xl mx-auto flex flex-wrap py-24">
-          <div className="xl:w-[33%] lg:w-[50%] md:w-full px-8 py-6 border-none flex flex-col items-center gap-[20px]">
-            <img className="w-[51.26px] h-[50px]" src={MissionImg} alt="" />
-            <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
-              Mission
-            </h2>
-            <p className="leading-relaxed text-center mb-4">
-              Lorem ipsum dolor sit amet consectetur. Arcu at aliquam eu purus
-              volutpat. Tincidunt libero nibh potenti sem ac est pellentesque
-              proin in. Sagittis duis eget posuere consequat volutpat eu
-              facilisis vestibulum aenean. Posuere mauris sed iaculis amet
-              adipiscing
+      <div className="relative flex flex-col items-center max-w-screen-xl mx-auto md:flex-row  gap-[60px] py-10">
+        <div className="flex items-center py-5 flex-1 md:py-10 px-5 md:px-0">
+          <div className="text-left flex flex-col gap-[20px]">
+            <p className="font-open-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[16px] font-normal leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-[41px] text-left text-[#444444]">
+              The architecture of Jivana is a seamless blend of the ancient and
+              the modern. Thoughtfully crafted with local materials such as
+              wood, mud, and stone, the resort pays homage to centuries-old
+              building practices that define the valley’s heritage. Our design
+              reflects the warmth and character of traditional mountain homes,
+              enhanced by contemporary comforts that prioritize both luxury and
+              sustainability. This approach creates a space that is both
+              timeless and inviting—a place where elegance meets authenticity.
+              Jivana is an immersive journey, designed to connect our guests
+              with the soul of the Yasin Valley. From the serenity of our
+              natural surroundings to the rich history embedded in each
+              structure, Jivana provides a deeply fulfilling escape. Here,
+              guests find a unique opportunity to slow down, reconnect with
+              themselves, and embrace the beauty of simplicity. This is more
+              than just a stay—it is an invitation to experience life at its
+              most vibrant and harmonious.
             </p>
           </div>
-          <div className="xl:w-[33%] lg:w-[50%] md:w-full px-8 py-6 border-l-2 border-[#000000] border-opacity-60 flex flex-col items-center gap-[20px]">
-            <img className="w-[51.26px] h-[50px]" src={VisionImg} alt="" />
-            <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
-              Vision
-            </h2>
-            <p className="leading-relaxed text-center mb-4">
-              Lorem ipsum dolor sit amet consectetur. Arcu at aliquam eu purus
-              volutpat. Tincidunt libero nibh potenti sem ac est pellentesque
-              proin in. Sagittis duis eget posuere consequat volutpat eu
-              facilisis vestibulum aenean. Posuere mauris sed iaculis amet
-              adipiscing
-            </p>
-          </div>
-          <div className="xl:w-[33%] lg:w-[50%] md:w-full px-8 py-6 border-l-2 border-[#000000] border-opacity-60 flex flex-col items-center gap-[20px]">
-            <img className="w-[51.26px] h-[50px]" src={ValueImg} alt="" />
-            <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
-              Values
-            </h2>
-            <p className="leading-relaxed text-center mb-4">
-              Lorem ipsum dolor sit amet consectetur. Arcu at aliquam eu purus
-              volutpat. Tincidunt libero nibh potenti sem ac est pellentesque
-              proin in. Sagittis duis eget posuere consequat volutpat eu
-              facilisis vestibulum aenean. Posuere mauris sed iaculis amet
-              adipiscing
-            </p>
-          </div>
+        </div>
+        <div className="flex items-center justify-end  max-w-[609px] h-[421px] w-full">
+          <img className="w-full h-full" src={AboutImg1} alt="" />
         </div>
       </div>
       {/*  */}
       <div className="max-w-screen-xl bg-[url('assets/visit-back.png')] py-7 md:py-0 h-full md:h-[535px] mx-auto bg-cover bg-no-repeat rounded-[10px] flex flex-col justify-center items-center px-4 lg:px-0">
         <p className="text-white text-center text-xl sm:text-2xl font-semibold sm:text-4xl">
-          Lets Visit Jivana Hotel and Resort and Enjoy
+          Why Jivana?
         </p>
         <p className="text-blue-100 mt-3 text-center  px-4">
-          Sukh Cha'n Wellness Club is a pioneering wellness center that offers a
-          unique and holistic approach to health and fitness. Established in
-          2005, the club is
+          Jivana Hotel and Resort is a sanctuary of wellness, culture, and
+          renewal, rooted in the pioneering legacy of Sukh Chan Wellness Club.
+          Building on Sukh Chan’s holistic approach, Jivana offers restorative
+          spa treatments, yoga, and mindfulness retreats in the serene Yasin
+          Valley. Beyond wellness, Jivana is a center of excellence for
+          promoting the valley’s rich history, art, and culture. Through
+          immersive programs, guests engage with local artisans, experience
+          traditional crafts, and connect deeply with the heritage of the Yasin
+          Valley. Every visit to Jivana is more than a stay; it’s a journey
+          toward vitality and balance, where guests feel at one with nature and
+          culture—a place you’ll wish to linger.
         </p>
-        <form
-          // action=""
-          // method="post"
-          className="mt-[30px] flex flex-col items-center gap-[40px] w-full"
-        >
-          <div className="flex flex-col justify-center md:flex-row flex-wrap gap-[10px] w-full">
-            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
-              <input
-                type="date"
-                className="h-[45px] border border-solid rounded-lg border-[#CECECE] outline-0 w-full px-3"
-              />
-            </div>
-            <div className="flex flex-col gap-[10px] w-full  md:w-[150px]">
-              <input
-                type="date"
-                className="h-[45px] border border-solid border-[#CECECE] rounded-lg outline-0 w-full px-3"
-              />
-            </div>
-            <div className="flex flex-col gap-[10px] ">
-              <div className="relative z-20">
-                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
-                  <option value="" className="dark:bg-dark-2">
-                    Guest
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    1
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    2
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    3
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    4
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    5
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    6
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    7
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    8
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    9
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    10
-                  </option>
-                </select>
-                <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[10px]">
-              <div className="relative z-20">
-                <select className=" w-full md:w-[150px] z-20 rounded-lg appearance-none border border-stroke border-[#CECECE]  py-[10px] px-5 text-dark-6 outline-none transition">
-                  <option value="" className="dark:bg-dark-2">
-                    Rooms
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    1
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    2
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    3
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    4
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    5
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    6
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    7
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    8
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    9
-                  </option>
-                  <option value="" className="dark:bg-dark-2">
-                    10
-                  </option>
-                </select>
-                <span className="absolute z-20 right-4 top-1/2 z-10 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-[#444444]"></span>
-              </div>
-            </div>
-          </div>
-          <button className="px-7 py-2 text-white font-medium bg-[#CB9A6F] rounded-lg duration-150">
-            Book now
-          </button>
-        </form>
+        <button className="py-[7px] px-7 text-lg rounded-[10px] rounded border-[1px] bg-[#CB9A6F] text-white mt-4">
+          Book Now
+        </button>
       </div>
+      <div className="bg-[#FAF5F1BD]">
+        <div className="max-w-screen-xl mx-auto flex flex-wrap py-24">
+          <div className="xl:w-[50%] lg:w-[50%] md:w-full px-8 py-6 border-none flex flex-col items-center gap-[20px]">
+            <img className="w-[51.26px] h-[50px]" src={MissionImg} alt="" />
+            <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
+              Mission
+            </h2>
+            <p className="leading-relaxed text-center mb-4">
+              At Jivana Hotel and Resort, our mission is to harmoniously blend
+              luxury, culture, and wellness, offering an immersive experience
+              that nourishes the mind, body, and soul. Nestled in the beautiful
+              Yasin Valley, we provide a retreat into nature and holistic
+              well-being, where guests can disconnect from their fast-paced
+              lives. Guided by the visionary philosophy of Ms. Nina Akbar’s Sukh
+              Chan Wellness Club, we integrate holistic health principles into
+              our spa treatments, yoga sessions, and cultural immersions. We
+              empower local communities to share their rich heritage, creating a
+              deep connection to the spirit of the Yasin Valley. At Jivana, we
+              inspire a lifelong commitment to wellness and cultural
+              appreciation in a nurturing environment that uplifts and
+              rejuvenates.
+            </p>
+          </div>
+          <div className="xl:w-[50%] lg:w-[50%] md:w-full px-8 py-6 border-l-2 border-[#000000] border-opacity-60 flex flex-col items-center gap-[20px]">
+            <img className="w-[51.26px] h-[50px]" src={VisionImg} alt="" />
+            <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
+              Vision
+            </h2>
+            <p className="leading-relaxed text-center mb-4">
+              At Jivana Hotel and Resort, we envision a vibrant cultural hub
+              that transcends luxury to become a global symbol of wellness and
+              sustainability. Our oasis allows guests to immerse themselves in
+              the rich heritage of the Yasin Valley while fostering creativity
+              and open dialogue. Committed to empowering local artists and
+              facilitating cultural exchange, we blend traditional architecture
+              with modern comforts to redefine luxury hospitality in Pakistan.
+              Building on the Sukh Chan Wellness Club's foundation, we support
+              female education and implement sustainable practices, aiming to be
+              a beacon of responsible luxury that values individual well-being
+              and community impact.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <section className=" box-border">
         <div className="ps-0 lg:ps-28 mx-auto ">
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-[52px] items-center">
