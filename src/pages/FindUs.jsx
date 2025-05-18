@@ -102,8 +102,10 @@ const FindUs = () => {
             <h2 className="text-lg sm:text-xl text-[#CB9A6F] font-medium title-font mb-2">
               Contact Number
             </h2>
-            <p className="leading-relaxed text-center mb-4">03555456200</p>
-            <p className="leading-relaxed text-center mb-4">03142554524</p>
+{/*             <p className="leading-relaxed text-center mb-4">03555456200</p> */}
+            <p className="leading-relaxed text-center mb-4">03555746640</p>
+{/*             <p className="leading-relaxed text-center mb-4">03142554524</p> */}
+            <p className="leading-relaxed text-center mb-4">03155334240</p>
           </div>
           <div className="xl:w-[33%] lg:w-[50%] md:w-full px-8 py-6 border-l-2 border-[#000000] border-opacity-60 flex flex-col items-center gap-[20px]">
             <img className="w-[51.26px] h-[50px]" src={mail} alt="" />
